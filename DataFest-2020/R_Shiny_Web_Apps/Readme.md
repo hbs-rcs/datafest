@@ -10,7 +10,7 @@ along with the examples and exercises.
 - **RStudio**: https://rstudio.com/products/rstudio/download/
 
 - **tidyverse, plotly, leaflet, and DT packages**: 
-  `install.packages(c("tidyverse", "leaflet", "DT"))` 
+  `install.packages(c("tidyverse", "plotly", "leaflet", "DT"))` 
 
 
 ## Workshop materials and setup
