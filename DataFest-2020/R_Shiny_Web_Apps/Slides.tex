@@ -78,7 +78,7 @@
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
   pdftitle={Shiny Web Applications in R},
-  pdfauthor={Ista Zahn and Jess Cohen-Tanugi},
+  pdfauthor={Ista Zahn},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -144,7 +144,7 @@
 
 
 \title{Shiny Web Applications in R}
-\author{Ista Zahn and Jess Cohen-Tanugi}
+\author{Ista Zahn}
 \date{}
 
 \begin{document}
@@ -152,7 +152,7 @@
 
 \setbeamertemplate{itemize items}[square]
 
-\begin{frame}
+\begin{frame}[allowframebreaks]
   \tableofcontents[hideallsubsections]
 \end{frame}
 \hypertarget{r-shiny-workshop-setup}{%
@@ -171,7 +171,7 @@ the examples and exercises.
   \textbf{RStudio}: \url{https://rstudio.com/products/rstudio/download/}
 \item
   \textbf{tidyverse, plotly, leaflet, and DT packages}:
-  \newline \texttt{install.packages(c("tidyverse",\ "plotly",\ "DT"))}
+  \newline \texttt{install.packages(c("tidyverse",\ "plotly",\ "leaflet",\ "DT"))}
 \end{itemize}
 \end{frame}
 
@@ -258,12 +258,9 @@ for?}\label{what-is-shiny-and-what-is-it-good-for}}
 \item
   Search and recommendation engine:
   \url{https://public-service.vpal.harvard.edu/}
-\end{itemize}
-
-\begin{itemize}[<+->]
-\tightlist
 \item
-  Many more examples at \url{https://www.showmeshiny.com/}
+  Nursing homes:
+  \url{https://www.hbs.edu/covid-19-business-impact/Topics/Health-Care-Management-and-Policy/COVID-19-Skilled-Care-Center-Scorecard}
 \end{itemize}
 
 \begin{itemize}[<+->]
@@ -317,6 +314,7 @@ for?}\label{what-is-shiny-and-what-is-it-good-for}}
 \section{Structure of a shiny
 application}\label{structure-of-a-shiny-application}}
 
+\begin{frame}{Structure of a shiny application}
 Objectives:
 
 \begin{itemize}
@@ -329,6 +327,7 @@ Objectives:
 \item
   Practice creating apps using storm data as an example.
 \end{itemize}
+\end{frame}
 
 \begin{frame}[fragile]{Shiny app components}
 \protect\hypertarget{shiny-app-components}{}
@@ -467,7 +466,7 @@ You can use
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{help.search}\NormalTok{(}\StringTok{"output"}\NormalTok{, }\DataTypeTok{package =} \StringTok{"shiny"}\NormalTok{)}
+\KeywordTok{help.search}\NormalTok{(}\StringTok{"Output"}\NormalTok{, }\DataTypeTok{package =} \StringTok{"shiny"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -476,7 +475,7 @@ to find other output functions in shiny.
 
 \begin{frame}[fragile]{Outputs and Renderers}
 \protect\hypertarget{outputs-and-renderers-1}{}
-Each \texttt{*output()} function has a corresponding \texttt{render*()}
+Each \texttt{*Output()} function has a corresponding \texttt{render*()}
 function. For example:
 
 \begin{itemize}[<+->]
@@ -544,7 +543,7 @@ You can use
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{help.search}\NormalTok{(}\StringTok{"input"}\NormalTok{, }\DataTypeTok{package =} \StringTok{"shiny"}\NormalTok{)}
+\KeywordTok{help.search}\NormalTok{(}\StringTok{"Input"}\NormalTok{, }\DataTypeTok{package =} \StringTok{"shiny"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -595,6 +594,7 @@ Open the exercise file: \emph{File \rightarrow Open File
 \section{Interactive tables and
 graphs}\label{interactive-tables-and-graphs}}
 
+\begin{frame}{Interactive tables and graphs}
 Javascript is the language of the web, and many of the most popular
 javascript libraries can be used directly from R.
 
@@ -609,6 +609,7 @@ Objectives:
 \item
   Practice using html widgets as inputs and outputs in shiny apps.
 \end{itemize}
+\end{frame}
 
 \begin{frame}[fragile]{Interactive tables with DT}
 \protect\hypertarget{interactive-tables-with-dt}{}
@@ -683,7 +684,7 @@ Open the exercise file: \emph{File \rightarrow Open File
 \begin{enumerate}
 \item
   Run the app and click on the blue markers. Examine the output in the
-  console to determin the input corresponding to the row number of the
+  console to determine the input corresponding to the row number of the
   clicked observation.
 \item
   Use the slice function to select the row corresponding to the clicked
@@ -695,6 +696,7 @@ Open the exercise file: \emph{File \rightarrow Open File
 \hypertarget{user-interface-ui}{%
 \section{User interface (UI)}\label{user-interface-ui}}
 
+\begin{frame}{User interface (UI)}
 Objectives:
 
 \begin{itemize}
@@ -707,6 +709,7 @@ Objectives:
 \item
   Practice creating apps using different layouts.
 \end{itemize}
+\end{frame}
 
 \begin{frame}[fragile]{Page layouts}
 \protect\hypertarget{page-layouts}{}
@@ -857,13 +860,6 @@ You can also use breakpoints in Rstudio.
 
 More information about debugging shiny apps is available at
 \url{https://shiny.rstudio.com/articles/debugging.html}
-\end{frame}
-
-\begin{frame}{Workshop feedback}
-\protect\hypertarget{workshop-feedback}{}
-Help us make DataFest even better by giving us feedback at
-
-\url{http://bit.ly/datafest_eval}
 \end{frame}
 
 \end{document}

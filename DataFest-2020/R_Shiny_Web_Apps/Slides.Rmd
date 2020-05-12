@@ -1,6 +1,6 @@
 ---
 title: "Shiny Web Applications in R"
-author: "Ista Zahn and Jess Cohen-Tanugi"
+author: "Ista Zahn"
 output:
   beamer_presentation:
     keep_tex: yes
@@ -29,7 +29,7 @@ There are a few things you need to install in order to follow along with the exa
 
 - **R**: https://cran.r-project.org
 - **RStudio**: https://rstudio.com/products/rstudio/download/
-- **tidyverse, plotly, leaflet, and DT packages**: \newline `install.packages(c("tidyverse", "plotly", "DT"))` 
+- **tidyverse, plotly, leaflet, and DT packages**: \newline `install.packages(c("tidyverse", "plotly", "leaflet", "DT"))` 
 
 
 ## Workshop materials and setup
@@ -69,7 +69,7 @@ There are a few things you need to install in order to follow along with the exa
 
 - Search and recommendation engine: https://public-service.vpal.harvard.edu/
 
-> - Many more examples at https://www.showmeshiny.com/
+- Nursing homes: https://www.hbs.edu/covid-19-business-impact/Topics/Health-Care-Management-and-Policy/COVID-19-Skilled-Care-Center-Scorecard
 
 > - Some built-in examples accessible via `runExample()`
 
@@ -183,7 +183,7 @@ Our first goal is to **display the number of storms by year** in our shiny app.
 You can use
 
 ```{r, echo = TRUE}
-help.search("output", package = "shiny")
+help.search("Output", package = "shiny")
 ```
 
 to find other output functions in shiny.
@@ -191,7 +191,7 @@ to find other output functions in shiny.
 
 ## Outputs and Renderers
 
-Each `*output()` function has a corresponding `render*()` function. For example:
+Each `*Output()` function has a corresponding `render*()` function. For example:
 
 > - `textOutput()` \rightarrow `renderText()`
 
@@ -233,7 +233,7 @@ Open the exercise file: *File \rightarrow Open File \rightarrow exercises/02_sto
 You can use
 
 ```{r, echo = TRUE}
-help.search("input", package = "shiny")
+help.search("Input", package = "shiny")
 ```
 
 to find other input functions in shiny.
@@ -265,10 +265,6 @@ Open the exercise file: *File \rightarrow Open File \rightarrow exercises/03_sto
 1. Add a sliderInput element to the ui .
 
 2. Modify the renderTable expression to filter the year displayed to the one selected by the user.
-
-
-
-
 
 
 # Interactive tables and graphs
@@ -333,7 +329,7 @@ Open the exercise file: *File \rightarrow Open File \rightarrow exercises/04_int
 
 
 1. Run the app and click on the blue markers. Examine the output in 
-the console to determin the input corresponding to the row number 
+the console to determine the input corresponding to the row number 
 of the clicked observation.
 
 2. Use the slice function to select the row corresponding
@@ -463,8 +459,3 @@ We've seeen how to use `print` or `str` to insect values. You can also use break
 More information about debugging shiny apps is available at https://shiny.rstudio.com/articles/debugging.html
 
 
-## Workshop feedback
-
-Help us make DataFest even better by giving us feedback at
-
-http://bit.ly/datafest_eval
