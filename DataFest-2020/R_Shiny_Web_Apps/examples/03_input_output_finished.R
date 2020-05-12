@@ -1,5 +1,5 @@
-## Goal: Layout the application elements in a more appealing way.
-
+## Goal: Enable filtering by storm status.
+  
 
 library(shiny)
 library(dplyr)
