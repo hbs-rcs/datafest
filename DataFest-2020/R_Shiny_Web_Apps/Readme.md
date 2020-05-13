@@ -26,7 +26,7 @@ along with the examples and exercises.
 ## This workshop
 
 - This workshop is hands-on; you'll get the most out of it if you 
-  download the materials and try the exercieses.
+  download the materials and try the exercises.
 
 - This workshop is at an introductory level, with the goal of enabling 
   you to create simple shiny apps.
